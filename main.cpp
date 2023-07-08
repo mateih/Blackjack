@@ -1,18 +1,44 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Card.hpp"
+#include <string>
+#include<sstream>
+    template <typename T>
+    std::string to_string(T value)
+    {
+      //create an output string stream
+      std::ostringstream os ;
 
+      //throw the value into the string stream
+      os << value ;
+
+      //convert the string stream into a string and return
+      return os.str() ;
+    }
 
 int main()
 {
     std::vector<sf::VideoMode> availiableVideoModes;
     availiableVideoModes = sf::VideoMode::getFullscreenModes();
     sf::RenderWindow window(availiableVideoModes[0],"Nu cred ca vezi asta",sf::Style::Fullscreen);
-    Card testCard(12,3);
-    std::cout<<testCard.getValue();
 
     sf::RectangleShape background(sf::Vector2f(2000.0f,2000.0f));
     background.setFillColor(sf::Color(19, 125, 47));
+
+
+    std::vector<Card*> cards;
+    for(int i=1;i<=13;i++){///load the 52 cards
+        for(int j=1;j<=4;j++){
+            sf::Texture* temp=new sf::Texture();
+            temp->loadFromFile("textures/cards/"+to_string((i-1)*4+j)+".png");
+            int icopie=i;
+            if(i>10)
+                icopie++;
+            Card* card=new Card(temp,icopie,j);
+            cards.push_back(card);
+        }
+    }
+
     while (window.isOpen()){
         sf::Event event;
         while (window.pollEvent(event))
@@ -23,6 +49,7 @@ int main()
 
         window.clear();
         window.draw(background);
+        cards[51]->Draw(window);
         window.display();
     }
 

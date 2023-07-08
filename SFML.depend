@@ -802,13 +802,16 @@
 	<string>
 	<vector>
 
-1688676499 source:d:\programare\blackjack\main.cpp
+1688832030 source:d:\programare\blackjack\main.cpp
+	<iostream>
 	<SFML/Graphics.hpp>
+	"Card.hpp"
+	<string>
+	<sstream>
 
-1688764760 source:d:\programare\blackjack\card.cpp
+1688766058 source:d:\programare\blackjack\card.cpp
 	"Card.hpp"
 
-1688764760 d:\programare\blackjack\card.hpp
+1688765844 d:\programare\blackjack\card.hpp
 	"SFML/Graphics.hpp"
-	<string>
 

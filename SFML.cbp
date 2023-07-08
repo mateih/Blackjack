@@ -50,6 +50,8 @@
 		<Linker>
 			<Add directory="D:/sfml/SFML-2.4.2/lib" />
 		</Linker>
+		<Unit filename="Card.cpp" />
+		<Unit filename="Card.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
