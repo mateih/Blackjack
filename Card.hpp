@@ -7,7 +7,9 @@ public:
     ~Card();
     int getValue();
     int getSign();
-    void Draw(sf::RenderWindow& window);
+    const sf::Texture* getTexture();
+    void draw(sf::RenderWindow& window);
+    void setPosition(sf::Vector2f newPos);
 private:
     int value;
     int sign;

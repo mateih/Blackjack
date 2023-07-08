@@ -7,7 +7,8 @@ class Deck{
 public:
     Deck(int sizeOf,std::vector<Card*> initialCards);
     ~Deck();
-    void Shuffle();
+    void shuffle();
+    Card* getCard(int pos);
 
 private:
     std::vector<Card*> cards;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Card.hpp"
+#include "Deck.hpp"
 #include <string>
 #include<sstream>
     template <typename T>
@@ -39,6 +40,11 @@ int main()
         }
     }
 
+    Deck deck(1,cards);
+    deck.shuffle();
+    deck.getCard(0)->setPosition(sf::Vector2f(1920.f/2,200.f));
+    deck.getCard(1)->setPosition(sf::Vector2f(1920.f/4,800.f));
+
     while (window.isOpen()){
         sf::Event event;
         while (window.pollEvent(event))
@@ -49,7 +55,8 @@ int main()
 
         window.clear();
         window.draw(background);
-        cards[51]->Draw(window);
+        deck.getCard(0)->draw(window);
+        deck.getCard(1)->draw(window);
         window.display();
     }
 

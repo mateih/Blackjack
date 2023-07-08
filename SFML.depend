@@ -802,16 +802,31 @@
 	<string>
 	<vector>
 
-1688832030 source:d:\programare\blackjack\main.cpp
+1688855852 source:d:\programare\blackjack\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Card.hpp"
+	"Deck.hpp"
 	<string>
 	<sstream>
 
-1688766058 source:d:\programare\blackjack\card.cpp
+1688855913 source:d:\programare\blackjack\card.cpp
 	"Card.hpp"
 
-1688765844 d:\programare\blackjack\card.hpp
+1688855806 d:\programare\blackjack\card.hpp
 	"SFML/Graphics.hpp"
+
+1688845420 source:d:\programare\blackjack\deck.cpp
+	"Deck.hpp"
+	"Card.hpp"
+	<algorithm>
+	<iostream>
+	<vector>
+	<random>
+	<chrono>
+
+1688842477 d:\programare\blackjack\deck.hpp
+	"SFML/Graphics.hpp"
+	"Card.hpp"
+	<vector>
 
